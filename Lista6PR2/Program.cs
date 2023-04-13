@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,6 +91,30 @@ namespace Lista6PR2
 
                     break;
                 case (3):
+                    
+                    float pesos, tpesos = 0, paradan = 0;
+                    Console.WriteLine("Digite a quantidade de avaliaçoes que voce fará:");
+                     int quantavali = int.Parse(Console.ReadLine());
+
+                    for (int i = 1; i <= quantavali; i++)
+                    {
+                        Console.WriteLine("Digite os pesos das notas {i}:");
+                        pesos = float.Parse(Console.ReadLine());
+                        tpesos += pesos;
+                    }
+                    Console.WriteLine("a soma dos pesos é" + tpesos);
+                    if (tpesos < 100)
+                            Console.WriteLine("Pesos insuficientes");
+
+                        else if (tpesos > 100) 
+                        Console.WriteLine("superior a 100% alcansada");
+                    
+
+                        else {
+                            Console.WriteLine("porcentagem de 100% alcansada");
+                        }
+                    
+
 
                     break;
                 case (4):
